@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="css/reset.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curriculum Rafael Alonso Lombraña</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600italic,700" rel="stylesheet">
+
+  <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"
+            data-dojo-config="async: true"></script>
+            <style>
+            		button {
+            			-webkit-transition: background-color 0.2s linear;
+            			border-radius:4px;
+            			-moz-border-radius: 4px 4px 4px 4px;
+            			-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+            			background-color: #E4F2FF;
+            			background-position: center top;
+            			background-repeat: repeat-x;
+            			border: 1px solid #769DC0;
+            			padding: 2px 8px 4px;
+            			font-size:1em;
+            			}
+            		button:hover {
+            			background-color: #AFD9FF;
+            			color: #000000;
+            			}
+            		.red-block {
+            			width: 200px;
+            			height: 300px;
+            			background-color: red;
+            			margin:2em;
+            			text-align:center;
+            			}
+            		.wipe {
+            			font-size: 28px;
+            			height: auto;
+            			width: auto;
+            			}
+            		.slide {
+            			position: absolute;
+            			left: 0;
+            			top: 100px;
+            			}
+            		.chain {
+            			opacity: 0;
+            			}
+            	</style>
+
+</head>
+<body>
+
+  <h1>Rafael Alonso Lombraña</h1>
+	<button id="fadeOutButton">Desaparece Rafa</button>
+	<button id="fadeInButton">Aparece Rafa</button>
+
+	<div id="fadeTarget">
+
+    <img id= "foto" src="images/Foto-Rafael-Alonso.jpg" alt="Foto de Rafael Alonso">
+	</div>
+	<!-- load dojo and provide config via data attribute -->
+	<script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js" data-dojo-config="async: true, isDebug: true"></script>
+	<script>
+		require(["dojo/_base/fx", "dojo/on", "dojo/dom", "dojo/domReady!"], function(fx, on, dom) {
+			var fadeOutButton = dom.byId("fadeOutButton"),
+					fadeInButton = dom.byId("fadeInButton"),
+					fadeTarget = dom.byId("fadeTarget");
+			on(fadeOutButton, "click", function(evt){
+				fx.fadeOut({ node: fadeTarget }).play();
+			});
+			on(fadeInButton, "click", function(evt){
+				fx.fadeIn({ node: fadeTarget }).play();
+			});
+		});
+	</script>
+
+
+
+  <a href="#informacion">Información Personal</a>
+  <a href="#experiencia">Experiencia Profesional</a>
+  <a href="#habilidades">Habilidades y Conocimientos</a>
+  <a href="#formacion">Formación Académica</a>
+  <a href="#perfiles">Perfiles Sociales</a>
+  <a href="#formulario">Formulario</a>
+
+
+  <h2 id="informacion">Información Personal</h2>
+  <hr>
+
+  <table>
+    <tr>
+
+      <td><ul>
+        <li><h1>Rafael Alonso Lombraña</h1></li>
+        <li><strong>Teléfono:</strong> 645 552 553</li>
+        <li><strong>Correo:</strong> rafael.alonso.lombrana@gmail.com</li>
+        <li><strong>Nacionalidad:</strong> Española</li>
+        <li><strong>Permiso de Conducir:</strong> B</li>
+        <li><strong>Dirección:</strong> Calle Viridiana 13, Portal B-1ºD 28018-Madrid </li>
+      </ul></td>
+    </tr>
+  </table>
+
+
+
+
+  <h2 id="experiencia">Experiencia Profesional</h2>
+  <hr>
+  <table id= "tabla1" class="table table-striped">
+
+    <thead>
+      <tr>
+        <th>Empresa</th>
+        <th>Puesto</th>
+        <th>Localización</th>
+        <th>Periodo</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>GRUPO DIPICAS</td>
+      <td>Socorrista </td>
+      <td>Las Matas, Madrid</td>
+      <td>Junio 2016 - Septiembre 2016</td>
+    </tr>
+    <tr>
+      <td>CRISTALERÍA ARTENOVO</td>
+      <td>Ayudante </td>
+      <td>Madrid</td>
+      <td>Enero 2016 - Junio 2016</td>
+    </tr>
+    <tr>
+      <td>GRUPO DIPICAS</td>
+      <td>Socorrista </td>
+      <td>Las Matas, Madrid</td>
+      <td>Junio 2015 - Septiembre 2015</td>
+    </tr>
+    <tr>
+      <td>GRUPO DIPICAS</td>
+      <td>Socorrista </td>
+      <td>Las Matas, Madrid</td>
+      <td>Junio 2014 - Septiembre 2014</td>
+    </tr>
+    <tr>
+      <td>GRUPO DIPICAS</td>
+      <td>Socorrista </td>
+      <td>Mejorada del Campo, Madrid</td>
+      <td>Junio 2011 - Septiembre 2011</td>
+    </tr>
+  </table>
+
+
+
+  <h2 id="habilidades"> Habilidades y Conocimientos </h2>
+  <hr>
+  <ul>
+    <li><strong>Desarrollo Web:</strong> HTML5, CSS, JavaScript</li>
+    <li><strong>Sistemas de Información Geografíca:</strong> ArcGIS Desktop, ArcGIS Pro</li>
+    <li><strong>Desarrollo:</strong> Python</li>
+
+
+  </ul>
+  <h2 id="formacion"> Formación Académica </h2>
+  <hr>
+  <table id ="tabla2">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Entidad</th>
+        <th>Promoción</th>
+      </tr>
+    </thead>
+    <tr>
+      <td>Master en Sistemas de Información Geográfica</td>
+      <td>ESRI España </td>
+      <td>2016</td>
+    </tr>
+    <tr>
+      <td>Grado en Geografía y Ordenación del Territorio</td>
+      <td>Universidad Comlutense de Madrid </td>
+      <td>2010</td>
+    </tr>
+  </table>
+
+  <h2 id="perfiles"> Perfiles Sociales </h2>
+
+  <hr>
+  <p>
+    También puedes encontrarme por estos medios:
+  </p>
+  <ul>
+    <li><a href="url"> LinKedIn</a></li>
+    <li><a href="url"> Facebook</a></li>
+    <li><a href="url"> Twitter</a></li>
+    <li><a href="url"> Github</a></li>
+  </ul>
+
+
+  <h2 id="formulario"> Formulario </h2>
+  <hr>
+
+  <form action="miScript.php" method="GET">
+    <label for="to">Para:</label>
+    <input id="to" type="email">
+
+    <label for="topic">Temática: </label>
+    <select id="topic" name="topic">
+      <option>-- Elige un tema --</option>
+      <option value="proposal">Propuesta</option>
+      <option value="report">Reporte</option>
+      <option value="other">Otro</option>
+    </select>
+
+    <br>
+    <label for="subject">Asunto: </label>
+    <input id="subject" name="subject" type="text">
+
+    <label for="body">Cuerpo:</label>
+    <textarea id="body" name="body"></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+
+  </script>
+
+</body>
+</html>
