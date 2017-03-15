@@ -7,6 +7,48 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600italic,700" rel="stylesheet">
+
+  <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"
+            data-dojo-config="async: true"></script>
+            <style>
+            		button {
+            			-webkit-transition: background-color 0.2s linear;
+            			border-radius:4px;
+            			-moz-border-radius: 4px 4px 4px 4px;
+            			-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+            			background-color: #5c93c5;
+            			background-position: center top;
+            			background-repeat: repeat-x;
+            			border: 1px solid #769DC0;
+            			padding: 2px 8px 4px;
+            			font-size:1em;
+            			}
+            		button:hover {
+            			background-color: #AFD9FF;
+            			color: #000000;
+            			}
+            		.red-block {
+            			width: 200px;
+            			height: 300px;
+            			background-color: red;
+            			margin:2em;
+            			text-align:center;
+            			}
+            		.wipe {
+            			font-size: 28px;
+            			height: auto;
+            			width: auto;
+            			}
+            		.slide {
+            			position: absolute;
+            			left: 0;
+            			top: 100px;
+            			}
+            		.chain {
+            			opacity: 0;
+            			}
+            	</style>
 </head>
 <body>
   <nav class="navbar navbar-inverse navbar-fixed-top hidden-xs">
@@ -33,8 +75,26 @@
   <div class="container">
     <div class="row">
       <div class="col-md-2 hidden-xs">
-        <img class="img-thumbnail" src="images/Foto-Rafael-Alonso.jpg" alt = "Rafa">
+        <button id="fadeOutButton">Estilo Anglosajón</button>
+      	<button id="fadeInButton">Estilo Español</button>
+        <div id="fadeTarget">
+        <img class="img-responsive" src="images/Foto-Rafael-Alonso.jpg" alt = "Rafa" id = "foto">
+        </div>
       </div>
+      <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js" data-dojo-config="async: true, isDebug: true"></script>
+    	<script>
+    		require(["dojo/_base/fx", "dojo/on", "dojo/dom", "dojo/domReady!"], function(fx, on, dom) {
+    			var fadeOutButton = dom.byId("fadeOutButton"),
+    					fadeInButton = dom.byId("fadeInButton"),
+    					fadeTarget = dom.byId("fadeTarget");
+    			on(fadeOutButton, "click", function(evt){
+    				fx.fadeOut({ node: fadeTarget }).play();
+    			});
+    			on(fadeInButton, "click", function(evt){
+    				fx.fadeIn({ node: fadeTarget }).play();
+    			});
+    		});
+    	</script>
       <div  class="col-md-10" style="position: static; text-align: justify; margin-top: 1rem;"><h1>Rafael Alonso</h1><ul>
         <li><strong>Teléfono:</strong> 645 552 553</li>
         <li><strong>Correo:</strong> rafael.alonso.lombrana@gmail.com</li>
@@ -165,7 +225,7 @@
         alt="Valid HTML!" />
       </a>
 
-      <a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">
+      <a href="https://jigsaw.w3.org/css-validator" target="_blank">
         <img style="border:0;width:88px;height:31px"
         src="images/valcss.png"
         alt="Valid CSS!" />
