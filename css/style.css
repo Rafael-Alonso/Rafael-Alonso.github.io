@@ -1,4 +1,8 @@
-
+img#foto{
+	width: 150px;
+	height: 180px;
+	border: 3px solid #5c93c5;
+}
 body{
 	line-height: 2rem;
 	padding-top: 70px;
@@ -63,4 +67,8 @@ button{
 	.container{
 		max-width: 970px;
 	}
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #ffffff;
+    background-color: #5c93c5;
 }
